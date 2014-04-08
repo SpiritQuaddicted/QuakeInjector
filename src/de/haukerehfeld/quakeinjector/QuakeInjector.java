@@ -257,8 +257,7 @@ public class QuakeInjector extends JFrame {
 			                          + File.separator
 			                          + getConfig().EngineExecutable);
 		}
-		starter = new EngineStarter(enginePath.get(),
-		                            engineExe,
+		starter = new EngineStarter(engineExe,
 		                            getConfig().EngineCommandLine);
 		installer = new Installer(enginePath,
 		                          getConfig().DownloadPath);
@@ -606,7 +605,7 @@ public class QuakeInjector extends JFrame {
 
 		c.DownloadPath.set(downloadPath);
 
-		setEngineConfig(enginePath, engineExecutable, getConfig().EngineCommandLine, rogueInstalled, hipnoticInstalled);
+		setEngineConfig(engineExecutable, getConfig().EngineCommandLine, rogueInstalled, hipnoticInstalled);
 
 
 		try {
@@ -629,12 +628,10 @@ public class QuakeInjector extends JFrame {
 	/**
 	 * @todo 2010-02-09 12:19 hrehfeld    Let this use configuration values to their full extent
 	 */
-	private void setEngineConfig(File enginePath,
-								 File engineExecutable,
+	private void setEngineConfig(File engineExecutable,
 	                             Configuration.EngineCommandLine commandline,
 	                             boolean rogueInstalled,
 	                             boolean hipnoticInstalled) {
-		starter.setQuakeDirectory(enginePath);
 		starter.setQuakeExecutable(engineExecutable);
 		starter.setQuakeCommandline(commandline);
 
