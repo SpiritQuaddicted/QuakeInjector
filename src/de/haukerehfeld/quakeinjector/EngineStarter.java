@@ -23,12 +23,10 @@ import java.io.File;
 import java.util.ArrayList;
 
 public class EngineStarter {
-	private File quakeDir;
 	private File quakeExe;
 	private String quakeCmdline;
 
-	public EngineStarter(File quakeDir, File quakeExe, Configuration.EngineCommandLine quakeCmdline) {
-		this.quakeDir = quakeDir;
+	public EngineStarter(File quakeExe, Configuration.EngineCommandLine quakeCmdline) {
 		this.quakeExe = quakeExe;
 		this.quakeCmdline = quakeCmdline.get();
 	}
@@ -48,17 +46,13 @@ public class EngineStarter {
 		cmd.add(startmap);
 		
 		ProcessBuilder pb = new ProcessBuilder(cmd);
-		pb.directory(quakeDir);
+		pb.directory(quakeExe.getParentFile());
 		pb.redirectErrorStream(true);
 
 		System.out.println(cmd);
 		
 		Process p = pb.start();
 		return p;
-	}
-
-	public void setQuakeDirectory(File dir) {
-		this.quakeDir = dir;
 	}
 
 	public void setQuakeExecutable(File exe) {
