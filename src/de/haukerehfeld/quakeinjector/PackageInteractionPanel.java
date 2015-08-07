@@ -486,6 +486,7 @@ class PackageInteractionPanel extends JPanel implements ChangeListener,
 			e.pack();
 			e.setLocationRelativeTo(main);
 			e.show();
+			e.appendCommandline(starter.getQuakeCmdline());
 
 		}
 		catch (java.io.IOException e) {

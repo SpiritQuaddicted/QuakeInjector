@@ -56,6 +56,10 @@ public class EngineStarter {
 		Process p = pb.start();
 		return p;
 	}
+	
+	public String getQuakeCmdline () {
+		return this.quakeCmdline;
+	}
 
 	public void setQuakeDirectory(File dir) {
 		this.quakeDir = dir;

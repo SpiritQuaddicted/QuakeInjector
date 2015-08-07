@@ -138,4 +138,8 @@ public class EngineOutputDialog extends JDialog {
 			}
 		}.execute();
 	}
+	
+	public void appendString(String string) {
+		output.append(string+"\n");
+	}
 }
