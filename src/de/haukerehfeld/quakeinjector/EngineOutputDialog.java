@@ -139,7 +139,7 @@ public class EngineOutputDialog extends JDialog {
 		}.execute();
 	}
 	
-	public void appendCommandline(String commandline) {
-		output.append(commandline+"\n");
+	public void appendString(String string) {
+		output.append(string+"\n");
 	}
 }
