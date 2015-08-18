@@ -60,14 +60,7 @@ The rightmost column marks the installation status, if there is a check then the
 Credits
 ***
 
-Spirit:
-    - idea
-    - database maintenance
-    - hosting
-    - feedback & testing
-
-Hauke Rehfeld (megaman in the quake world):
-    - programming
+The initial theoretical design of the Quake Injector was devised by **Spirit**, the code was written by **Hauke Rehfeld** (megaman in the quake world). Since the first releases Starbuck contributed the icon, additional programming came from **Joel Baxter (Johnny Law)** and **ericw**. Many thanks to all the users for feedback, criticism and praise.
 
 Changelog
 ***
